@@ -1,0 +1,41 @@
+# Nexus-Stack for Education - User Configuration
+# ===============================================
+#
+# Each user gets their own Nexus-Stack instance:
+#   - Server: nexus-<id>
+#   - Domain: <id>.BASE_DOMAIN
+#   - Services: info.<id>.BASE_DOMAIN, grafana.<id>.BASE_DOMAIN, etc.
+#
+# Fields:
+#   id:       Unique identifier (lowercase, numbers, hyphens only)
+#   email:    Primary email for Cloudflare Access login
+#   name:     Display name (optional)
+#   admins:   Additional admin emails (optional, for Cloudflare Access)
+
+# Example:
+
+# users:
+#   - id: max-muster
+#     email: max.muster@example.ch
+#     name: Max Muster
+#     admins:
+#       - trainer@example.ch
+
+#   - id: anna-schmidt
+#     email: anna.schmidt@example.ch
+#     name: Anna Schmidt
+#     admins:
+#       - trainer@example.ch
+#       - co-trainer@example.ch
+
+#   - id: peter-meier
+#     email: peter.meier@example.ch
+#     name: Peter Meier
+#     # no additional admins - only peter can access
+
+users:
+  - id: stefan-hslu
+    email: stefan.koch@hslu.ch
+    name: Stefan HSLU Koch
+    admins:
+      - sk@stefanko.ch
