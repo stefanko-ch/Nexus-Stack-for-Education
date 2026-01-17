@@ -13,10 +13,27 @@ This tool automates the deployment of Nexus-Stack instances for educational envi
 
 ## Prerequisites
 
-- [Nexus-Stack](https://github.com/stefanko-ch/Nexus-Stack) prerequisites (OpenTofu, Cloudflare account, Hetzner account)
 - Bash shell
-- `git` installed
-- Wildcard DNS or ability to create subdomains
+- `git`, `yq`, `jq` installed (`brew install yq jq`)
+- `gh` CLI for GitHub method (`brew install gh`)
+- `tofu` or `terraform` for local method
+
+### Hetzner Cloud Setup
+
+1. Create a project at [console.hetzner.cloud](https://console.hetzner.cloud)
+2. Go to **Security** → **API Tokens**
+3. Generate a token with **Read & Write** permissions
+4. Save the token for `.env`
+
+### Cloudflare Setup
+
+1. Domain added to [Cloudflare](https://dash.cloudflare.com)
+2. Create API Token at **Profile** → **API Tokens** with permissions:
+   - Zone:DNS:Edit
+   - Zone:Zone:Read  
+   - Account:Cloudflare Tunnel:Edit
+   - Account:Access: Apps and Policies:Edit
+3. Note your **Account ID** and **Zone ID** (found in domain overview)
 
 ## Quick Start
 
